@@ -64,49 +64,6 @@ $$
 
 (The generator indexing is just for illustration. Consult the code.)
 
-### Claim note
-
-Claim notes are created to document the amount a user deposited in the first stage of a defi interaction. Whatever the output token values of the defi interaction, the data in the claim note will allow the correct share to be apportioned to the user. See the [claim circuit doc](./claim_circuit.md) for more details.
-
-Consists of the following:
-
-- `deposit_value`: The value that the user deposited in the first stage of their defi interaction.
-- `bridge_call_data`: Contains an encoding of the bridge being interacted with.
-- `value_note_partial_commitment`: See the above 'value note' section.
-- `input_nullifier`: In order to create a claim note, a value note must be nullified as part of the 'defi deposit' join-split transaction. We include that `input_nullifier` here to ensure the claim commitment is unique (which, in turn, will ensure this note's nullifier will be unique).
-- `defi_interaction_nonce`: A unique identifier for a particular defi interaction that took place. This is assigned by the RollupProcessor.sol contract, and emitted as an event.
-- `fee`: The fee to be paid to the rollup processor, specified as part of the defi deposit join-split tx. Half gets paid to process the defi deposit tx, and half to process the later claim tx.
-
-**partial commitment**
-
-- `pedersen::compress(deposit_value, bridge_call_data, value_note_partial_commitment, input_nullifier)`
-  - Pedersen GeneratorIndex: `CLAIM_NOTE_PARTIAL_COMMITMENT`
-  - `bridge_call_data` can be zero.
-
-**complete commitment**
-
-- `pedersen::compress(claim_note_partial_commitment, defi_interaction_nonce, fee)`
-  - Pedersen GeneratorIndex: `CLAIM_NOTE_COMMITMENT`
-  - `fee` and `defi_interaction_nonce` could be zero.
-
-### Defi Interaction note
-
-A defi interaction note records the details of a particular defi interaction. It records the total deposited by all users and the totals output by the defi bridge. These totals get apportioned to each user based on the contents of each user's claim note.
-
-Consists of the following:
-
-- `bridge_call_data`: Contains an encoding of the bridge that was interacted with.
-- `total_input_value`: The total deposited to the bridge by all users who took part in this defi interaction.
-- `total_output_value_a`: The sum returned by the defi bridge denominated in 'token A'. (The details of 'token A' are contained in the `bridge_call_data`).
-- `total_output_value_b`: The sum returned by the defi bridge denominated in 'token B'. (The details of 'token B' are contained in the `bridge_call_data`).
-- `interaction_nonce`: (a.k.a. defi interaction nonce) A unique identifier for a particular defi interaction that took place. This is assigned by the RollupProcessor.sol contract, and emitted as an event.
-- `interaction_result`: true/false - was the L1 transaction a success?
-
-**commitment**
-
-- `pedersen::compress(bridge_call_data, total_input_value, total_output_value_a, total_output_value_b, interaction_nonce, interaction_result)`
-  - Pedersen GeneratorIndex: `DEFI_INTERACTION_NOTE_COMMITMENT`
-
 # Note encryption and decryption
 
 Details on this are found [here](https://hackmd.io/@aztec-network/BJKHah_4d)
@@ -137,33 +94,3 @@ Pedersen GeneratorIndex:
 
 - `JOIN_SPLIT_NULLIFIER_ACCOUNT_PRIVATE_KEY` for the hashed_pk
 - `JOIN_SPLIT_NULLIFIER` to compress the inputs
-
-## Claim note nullifier
-
-**Objectives** of this nullifier:
-
-- Anyone (notably the rollup provider) may be able to produce this nullifier.
-- No collisions. Each nullifier can only be produced for one claim note commitment. Duplicate nullifiers must not be derivable from different claim note commitments.
-- No collisions between nullifiers of other notes (i.e. value notes or defi interaction notes).
-- This nullifier must only be added to the nullifier tree if it is the output of a claim circuit which 'spends' the corresponding claim note.
-- No double-spending. Each claim note commitment must have one, and only one, nullifier.
-
-**Calculation**
-
-- `nullifier = pedersen::compress(claim_note_commitment);`
-  - Note: it is ok that observers can see which claim note is being nullified, since values in a defi interaction are public (only owners are private). Furthermore, the rollup priovider needs to be able to generate the claim proof and doesn't have access to any user secrets - so this nullifier allows this use case.
-  - Pedersen GeneratorIndex:`CLAIM_NOTE_NULLIFIER`
-
-## Defi Interaction nullifier
-
-**Objectives** of this nullifier:
-
-- This is not a 'conventional' nullifier, in the sense that it doesn't prevent others from 'referring' to the defi interaction note. It's really only needed so that _something_ unique may be fed into the `output_note_2` output of the claim circuit.
-- Anyone (notably the rollup provider) may be able to produce a valid nullifier on behalf of any user who partook in the corresponding defi interaction.
-- No collisions between nullifiers of other notes (i.e. value notes or claim notes).
-- This nullifier must only be added to the nullifier tree if it is the output of a claim circuit which 'refers' the corresponding defi interaction note note and 'spends' a claim note which was created during that defi interaction.
-
-**Calculation:**
-
-- `nullifier = pedersen::compress(defi_interaction_note_commitment, claim_note_commitment);`
-- Pedersen GeneratorIndex:`DEFI_INTERACTION_NULLIFIER`
