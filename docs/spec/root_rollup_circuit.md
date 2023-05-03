@@ -53,7 +53,7 @@ In addition to the public inputs, the preimage to the above SHA256 hash is also 
 
 The purpose of the SHA256 compression is not to hide information, it is solely to reduce the number of public inputs to the circuit.
 
-This is because, for a verifier smart contract on the Ethereum blockchain network, the computational cost of processing a public input is ~160 gas. The computational cost of including a 32-byte value in a SHA256 hash is 6 gas. Therefore reducing the public inputs via SHA256 hashing represents a significant gas saving, lowering the cost of processing a rollup block.
+This is because, for a verifier smart contract on the Polygon blockchain network, the computational cost of processing a public input is ~160 gas. The computational cost of including a 32-byte value in a SHA256 hash is 6 gas. Therefore reducing the public inputs via SHA256 hashing represents a significant gas saving, lowering the cost of processing a rollup block.
 
 The `rollup_benficiary` is just added to the circuit to ensure the proof constructor can pay who they intend.
 

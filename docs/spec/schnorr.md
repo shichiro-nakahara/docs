@@ -2,7 +2,7 @@
 
 The code is templated in such a way that the primes $q$ and $r$ are defined relative to the group `G1`, which is unfortunate, since $r$ is chosen as a fixed, definite value in our specs. An alternative would be to have the templates in schnorr.tcc refer to `F_nat` and `F_em` (for 'native' and 'emulated') or something like this. The easier and probably better alternative for now is to just rename our primes in the Yellow Paper as $p_{\text{B}}$ and $p_{\text{G}}$.
 
-For Aztec's current uses cases, `G1` is a cyclic subgroup of an elliptic curve defined over a field $\mathbb{F}_q$ (implemented as a class `Fq`), and `Fr` (aka `field_t`) is the a field of size equal to the size of `G1`, so `Fr` is the field acting on `G1` by scalar multiplication.
+For PolyAztec's current uses cases, `G1` is a cyclic subgroup of an elliptic curve defined over a field $\mathbb{F}_q$ (implemented as a class `Fq`), and `Fr` (aka `field_t`) is the a field of size equal to the size of `G1`, so `Fr` is the field acting on `G1` by scalar multiplication.
 
 ## Role:
 
@@ -24,7 +24,7 @@ They are used by the account circuit and the join-split circuit.
 
 ### Elliptic curve addition
 
-We restrict in this code to working with curves described by Weierstrass equations of the form $y^2 = x^3 + B$ defined over a $\mathbb{F}_r$ with $r$ prime. Consider two non-identity points $P_1 = (x_1, y_1)$, $P_2 = (x_2, y_2)$. If $x_1 = x_2$, then $y_1 = \pm y_2$, so the two points are equal or one is the inverse of the other. If $y_1 = y_2$, then one has $x_1 = \zeta x_2$ with $\zeta^3=1$. In the case of Grumpkin, the equation $X^3-1$ splits over $\mathbb{F}_r$, there are indeed distinct pairs of points satisfying this relation (for an example of how we handle this elsewhere in the code base, see https://github.com/AztecProtocol/aztec2-internal/issues/437).
+We restrict in this code to working with curves described by Weierstrass equations of the form $y^2 = x^3 + B$ defined over a $\mathbb{F}_r$ with $r$ prime. Consider two non-identity points $P_1 = (x_1, y_1)$, $P_2 = (x_2, y_2)$. If $x_1 = x_2$, then $y_1 = \pm y_2$, so the two points are equal or one is the inverse of the other. If $y_1 = y_2$, then one has $x_1 = \zeta x_2$ with $\zeta^3=1$. In the case of Grumpkin, the equation $X^3-1$ splits over $\mathbb{F}_r$, there are indeed distinct pairs of points satisfying this relation.
 
 Suppose $P_1 \neq - P_2$. Then $P_1 + P_2 = (x_3, y_3)$ with
 

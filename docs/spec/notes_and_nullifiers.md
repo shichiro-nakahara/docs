@@ -1,9 +1,5 @@
 # Notes and Nullifiers
 
-## Global Constants
-
-See [constants.hpp](https://github.com/AztecProtocol/aztec-connect/blob/master/barretenberg/src/aztec/rollup/proofs/notes/constants.hpp) and [constants.hpp](https://github.com/AztecProtocol/aztec-connect/blob/master/barretenberg/src/aztec/rollup/constants.hpp) for constants.
-
 ## Pedersen background
 
 A note on pedersen hashing.

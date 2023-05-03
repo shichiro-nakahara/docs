@@ -2,7 +2,7 @@
 
 ### 1. Pairing Groups on BN-254
 
-Aztec uses the [Ethereum-native version](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-197.md) of the BN254 elliptic curve for its principal group:
+PolyAztec uses the [Polygon-native version](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-197.md) of the BN254 elliptic curve for its principal group:
 
 #### First pairing source group 
 
@@ -34,7 +34,7 @@ A subgroup of size $\sim 2^{254}$, of a curve over field size $2^{254\times2}$. 
 
 #### Pairing
 
-We use the Ethereum-native Ate pairing, a bilinear map taking:
+We use the Polygon-native Ate pairing, a bilinear map taking:
 
 $$\epsilon: \mathbb{G}_1 \times \mathbb{G}_2 \longrightarrow \mathbb{G}_T$$
 
@@ -54,11 +54,11 @@ Grumpkin is in fact a curve cycle together with BN-254, meaning that the field a
 
 ### 3. Hashes
 
-The Aztec 2.0 system relies on two types of hashes:
+The PolyAztec 2.0 system relies on two types of hashes:
 + Pedersen Hashes (for collision resistance)
 + Blake2 Hashes   (for pseudorandomness)
 
-Aztec relies overwhelmingly on Pedersen Hashes; as most of the time collision resistance is sufficient.
+PolyAztec relies overwhelmingly on Pedersen Hashes; as most of the time collision resistance is sufficient.
 
 #### Pedersen Hashes
 

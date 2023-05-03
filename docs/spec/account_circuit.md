@@ -2,7 +2,7 @@
 
 ## Background
 
-Aztec accounts are different from Ethereum addresses, mainly because deriving an Ethereum address is expensive (constraint-wise) within a circuit. Also, Aztec accounts have several extra features:
+PolyAztec accounts are different from Polygon addresses, mainly because deriving an Polygon address is expensive (constraint-wise) within a circuit. Also, PolyAztec accounts have several extra features:
 
 - A human-readable name (an `alias`) can be associated with an account public key.
 - Multiple (unlimited) spending keys (a.k.a. signing keys) can be associated with an `alias` and its `account_public_key`, to enable users to more-easily spend from multiple devices (for example).
@@ -51,7 +51,7 @@ The account circuit can be executed in one of three 'modes':
     - Used to register a new `alias`.
     - A new 'account' is registered by generating nullifiers for a new `alias_hash` and a new `account_public_key`. This ensures the `alias_hash` and `account_public_key` haven't already been registered by someone else.
     - Two new `account_notes` may be created, as a way of registering the first two new `spending_public_keys` against the new account.
-    - The circuit enforces that the caller knows the private key of `account_public_key`, by checking that a signature over the circuit's inputs has been signed by the `account_private_key`. We need to do this, in part, because the owner of this `account_public_key` might already have been sent value notes, even before registering it with Aztec Connect.
+    - The circuit enforces that the caller knows the private key of `account_public_key`, by checking that a signature over the circuit's inputs has been signed by the `account_private_key`. We need to do this, in part, because the owner of this `account_public_key` might already have been sent value notes, even before registering it with PolyAztec.
     - > Note: there are no protocol checks to ensure these new `spending_public_keys` (which are added to `account_notes`) are new or unique.
     - > Note: There are no protocol checks during `create`, to ensure the user knows private keys to these `spending_public_keys`.
 - **Update**
@@ -101,14 +101,10 @@ Unlike the join-split circuit (for example), which always produces nullifiers, t
 
 - `nullifier_2 = (create || migrate) ? pedersen::compress(account_public_key) : 0`
 
-> Note: The rollup circuit for Aztec Connect permits unlimited `0` nullifiers to be added to the nullifier tree, because:
+> Note: The rollup circuit for PolyAztec permits unlimited `0` nullifiers to be added to the nullifier tree, because:
 > - Each nullifier is added to the nullifier tree at the leaf index which is equal to the nullifier value.
 > - So the rollup circuit will try to add `nullifier = 0` to `leafIndex = 0`.
 > - First it checks whether the leaf is empty. Well `0` implies "empty", so this check will pass, and the value `0` will be once-again added to the 0th leaf.
-
-## Diagram
-
-[Here's](https://drive.google.com/file/d/1iscYm-B89I9LIB7YgM_L9cHaV6SSMjRT/view?usp=sharing) a detailed diagram of how all of Aztec's different keypairs are derived, and the flow of account creation and migration. (Edits are welcome - let Mike know if the link doesn't work).
 
 # The circuit
 

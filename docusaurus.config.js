@@ -8,18 +8,18 @@ const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Aztec Docs",
-  tagline: "Scalable privacy on Ethereum",
-  url: "https://docs.aztec.network",
+  title: "PolyAztec Docs",
+  tagline: "Privacy on Polygon",
+  url: "https://docs.polyaztec.xyz",
   baseUrl: "/",
   trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/Aztec_docs_icons-02.svg",
+  favicon: "img/favicon-32x32.png",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Aztec Network", // Usually your GitHub org/user name.
+  organizationName: "PolyAztec", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -37,7 +37,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/AztecProtocol/docs/edit/main/",
+          editUrl: "https://github.com/shichiro-nakahara/docs/edit/main/",
           routeBasePath: "/",
           remarkPlugins: [math],
           rehypePlugins: [katex],
@@ -45,10 +45,6 @@ const config = {
         blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
-        },
-        gtag: {
-          trackingID: "G-WSBTSFJCSF",
-          anonymizeIP: true,
         }
       }),
     ],
@@ -93,21 +89,21 @@ const config = {
       },
       navbar: {
         logo: {
-          alt: "Aztec Logo",
-          srcDark: "img/new_logo-01.svg",
-          src: "img/Aztec_logo_dark-01.svg"
+          alt: "PolyAztec Logo",
+          srcDark: "img/polyaztec-logo-white.svg",
+          src: "img/polyaztec-logo-purple.svg"
         },
         items: [
           {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Aztec Protocol",
+            label: "Protocol",
           },
           {
             type: "doc",
-            docId: "zk-money/userguide",
-            label: "Zk.money",
+            docId: "app/userguide",
+            label: "App",
           },
         ],
       },
@@ -122,8 +118,8 @@ const config = {
                 to: "/",
               },
               {
-                label: "How Aztec Works",
-                to: "/category/how-aztec-works",
+                label: "How PolyAztec Works",
+                to: "/category/how-polyaztec-works",
               },
             ],
           },
@@ -131,17 +127,9 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Discord",
-                href: "https://discord.gg/UDtJr9u",
-              },
-              {
                 label: "Twitter",
-                href: "https://twitter.com/aztecnetwork",
-              },
-              {
-                label: "Plonk Cafe",
-                href: "https://www.plonk.cafe/",
-              },
+                href: "https://twitter.com/poly_aztec",
+              }
             ],
           },
           {
@@ -149,16 +137,12 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/AztecProtocol",
-              },
-              {
-                label: "Grants",
-                href: "https://aztec.network/grants"
+                href: "https://github.com/shichiro-nakahara",
               }
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Aztec, built with Docusaurus, powered by <a target="_blank" href="https://netlify.com">Netlify.</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Aztec, modified by PolyAztec, built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
