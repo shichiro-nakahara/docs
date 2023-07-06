@@ -4,7 +4,7 @@
 
 Most "Account Not Registered" errors can be resolved with one of two methods:
 
-1. Double-checking your Polygon address. Please connect to PolyAztec using the Polygon address you used to sign up for your alias.
+1. Double-checking your Polygon address. Please connect to Nata Network using the Polygon address you used to sign up for your alias.
 
 2. Mistyping or misremembering your alias. Remember that your alias is critical to access your account and forgetting or misplacing it means you may not be able to access your funds.
 
@@ -22,15 +22,15 @@ In either case, navigate to your browser console (F12 or Alt-Cmd-J) and the Appl
 
 ### Firefox
 
-If you are using Firefox, open the browser console (F12 or right click and select Inspect). Go to the Storage tab on the top bar. Select the Indexed DB tab, select https://polyaztec.xyz and right click "hummus" and delete it. Refresh the page.
+If you are using Firefox, open the browser console (F12 or right click and select Inspect). Go to the Storage tab on the top bar. Select the Indexed DB tab, select https://natanetwork.io and right click "hummus" and delete it. Refresh the page.
 
 ![image](/img/troubleshoot-firefox.png)
 
-## Known issue: Deposited funds not showing in PolyAztec wallet balance
+## Known issue: Deposited funds not showing in Nata Network wallet balance
 
 Step 1: [Clear site data](#hung-on-connecting-to-rollup-provider-on-sign-up-or-log-in)
 
-Step 2: Login to https://polyaztec.xyz/balance, wait till the dashboard has loaded.
+Step 2: Login to https://natanetwork.io/balance, wait till the dashboard has loaded.
 
 Step 3: Open Developer tool (F12). Select all levels in the console including Verbose.
 
@@ -44,6 +44,6 @@ Step 5: Send us a message on [Twitter](https://twitter.com/poly_aztec).
 
 ## Frequently Asked Questions
 
-Check the [Frequently Asked Questions page](/how-polyaztec-works/faq) to see if your problem is addressed there.
+Check the [Frequently Asked Questions page](/how-natanetwork-works/faq) to see if your problem is addressed there.
 
 If it isn't, send us a message on [Twitter](https://twitter.com/poly_aztec).

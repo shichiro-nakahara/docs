@@ -1,6 +1,6 @@
 # Asset Valuation
 
-All dollar valuations seen in PolyAztec are derived with use of oracles provided by [Chainlink](https://chain.link/).
+All dollar valuations seen in Nata Network are derived with use of oracles provided by [Chainlink](https://chain.link/).
 
 | Asset | Chainlink Oracle                                                                                     |
 | ----- | ---------------------------------------------------------------------------------------------------- |

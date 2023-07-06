@@ -2,11 +2,11 @@
 
 import Image from '@theme/IdealImage';
 
-__Fully Confidential Polygon Transactions: PolyAztec's Privacy Architecture__
+__Fully Confidential Polygon Transactions: Nata Network's Privacy Architecture__
 
-_An overview of how PolyAztec preserves privacy._
+_An overview of how Nata Network preserves privacy._
 
-[PolyAztec](https://PolyAztec.network/) is a privacy-first zero-knowledge rollup on Polygon: that means it's the only [Layer 2](https://Polygon.org/en/developers/docs/scaling/layer-2-rollups/) built from the ground up to be fully privacy preserving.
+[Nata Network](https://natanetwork.io/) is a privacy-first zero-knowledge rollup on Polygon: that means it's the only [Layer 2](https://Polygon.org/en/developers/docs/scaling/layer-2-rollups/) built from the ground up to be fully privacy preserving.
 
 To understand the paradigm-changing nature of private transactions and why it's important to build privacy directly into a network's architecture, we have to first discuss why Polygon is not private.
 
@@ -95,11 +95,11 @@ You can think of a cash transaction as **a change in ownership of an object** (t
 
 *What an ownership change looks like for an encrypted note, probably.*
 
-When an PolyAztec transaction processes, rather than doing an account balance update (incrementing and decrementing balance), the network simply re-assigns ownership for a given note.
+When an Nata Network transaction processes, rather than doing an account balance update (incrementing and decrementing balance), the network simply re-assigns ownership for a given note.
 
 Why is this helpful? Well it turns out it's *way easier* to encrypt a note, because it really only needs two things written on it: how much it's worth, and who it's owned by. When it changes hands, you scribble out the old owner's name and write the new owner's name. *Ecco qua!*
 
-### Simple Transfers on PolyAztec
+### Simple Transfers on Nata Network
 So what exactly happens in a simple note transaction?
 
 Say Snoop has two 50 MATIC notes totaling 100 MATIC and Cozomo has 0 notes.
@@ -127,7 +127,7 @@ Recall the two steps:
 1. Snoop destroys two 50 MATIC notes and creates a 20 MATIC note and an 80 MATIC note
 2. Snoop sends the 20 MATIC note to Cozomo
 
-To ensure nothing fishy happens in step 1, all Snoop needs to do is prove to the system (PolyAztec) that the two notes he intends to create are equivalent in value to the two notes he intends to destroy.
+To ensure nothing fishy happens in step 1, all Snoop needs to do is prove to the system (Nata Network) that the two notes he intends to create are equivalent in value to the two notes he intends to destroy.
 
 This is known as a join-split transaction, and it conforms to this simple equivalence: __A + B = C + D.__
 
@@ -137,22 +137,22 @@ In order to prove that the output notes (C + D) are equivalent in value to the i
 
 The black magic of ZKPs¹ means __he can prove the equivalence A + B = C + D without revealing any of their individual values.__
 
-PolyAztec then validates the proof and says, “By the powers of Zero Knowledge, this must be true,” at which point the smart contract destroys the two input notes, generates the two output notes, and records the new output notes as an encrypted commitment in the note registry.
+Nata Network then validates the proof and says, “By the powers of Zero Knowledge, this must be true,” at which point the smart contract destroys the two input notes, generates the two output notes, and records the new output notes as an encrypted commitment in the note registry.
 
 ### Proving Ownership
 
-It's worth discussing how ownership of notes is proven in PolyAztec, which has analogies to Polygon-world. How do you prove you control access to an address in Polygon? You sign a message using your wallet.
+It's worth discussing how ownership of notes is proven in Nata Network, which has analogies to Polygon-world. How do you prove you control access to an address in Polygon? You sign a message using your wallet.
 
-How do you prove you control access to a note in PolyAztec? With a very very fancy cryptographic signature called a zero knowledge proof.
+How do you prove you control access to a note in Nata Network? With a very very fancy cryptographic signature called a zero knowledge proof.
 
-The proof says, “Somewhere in PolyAztec's state, there: a) exists a note with a certain value, and b) I own it.”
+The proof says, “Somewhere in Nata Network's state, there: a) exists a note with a certain value, and b) I own it.”
 
-And how's the state of the PolyAztec system stored? In two [Merkle Trees](https://en.wikipedia.org/wiki/Merkle_tree):
+And how's the state of the Nata Network system stored? In two [Merkle Trees](https://en.wikipedia.org/wiki/Merkle_tree):
 
 - A note tree, containing all the notes that have ever been created; and
 - A nullifier tree, containing all the notes that have ever been destroyed
 
-Saying you own a note indicates to PolyAztec that the note exists in the note tree, and that no corresponding note-nullifier exists in the nullifier tree.
+Saying you own a note indicates to Nata Network that the note exists in the note tree, and that no corresponding note-nullifier exists in the nullifier tree.
 
 When we talk about “destroying” a note, that actually means _adding_ a nullifier to the nullifier tree rather than deleting a note from the note tree.
 
@@ -166,7 +166,7 @@ In order to send notes that I've proven I own, an entirely new Merkle tree (and 
 
 I hope this gives you a solid grounding for understanding why privacy is challenging: we need to __verify__ that transactions are legitimate and properly executed without __violating__ or exposing user data.
 
-These unique constraints mean privacy-preserving architecture must be constructed from the ground up. PolyAztec is the only L2 built this way — with privacy protected by its core architecture and facilitated by the magic of zero knowledge. *Grazie mille!*
+These unique constraints mean privacy-preserving architecture must be constructed from the ground up. Nata Network is the only L2 built this way — with privacy protected by its core architecture and facilitated by the magic of zero knowledge. *Grazie mille!*
 
 Notes
 
@@ -176,7 +176,7 @@ Notes
 
 ### What are 'private transactions'?
 
-Transactions within the PolyAztec rollup are hidden from observers and the PolyAztec rollup provider. Both the identities of sender/recipient and the values transferred are encrypted.
+Transactions within the Nata Network rollup are hidden from observers and the Nata Network rollup provider. Both the identities of sender/recipient and the values transferred are encrypted.
 
 <Image img={require('/img/private-txs.png')} />
 
@@ -184,7 +184,7 @@ Transactions within the PolyAztec rollup are hidden from observers and the PolyA
 
 ### Are deposits private?
 
-When you deposit into our rollup, people can see the Polygon address you deposited from, and how much you deposited. They cannot see the identity of the PolyAztec address you deposited into.
+When you deposit into our rollup, people can see the Polygon address you deposited from, and how much you deposited. They cannot see the identity of the Nata Network address you deposited into.
 
 ---
 
@@ -196,10 +196,10 @@ When you withdraw to a regular Polygon address, the address you withdrew to is s
 
 These 6 characters are the last 6 characters of the withdrawal address
 
-**For privacy, you need to withdraw to a different Polygon address.** Use a different address than the one you fund or register PolyAztec username with.
+**For privacy, you need to withdraw to a different Polygon address.** Use a different address than the one you fund or register Nata Network username with.
 
 ---
 
 ### What information about my transaction will be shown on explorer like Polygonscan?
 
-It will show the funds were sent from an “PolyAztec Contract / Private Rollup”.
+It will show the funds were sent from an “Nata Network Contract / Private Rollup”.

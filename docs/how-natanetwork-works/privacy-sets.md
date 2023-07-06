@@ -2,25 +2,25 @@
 title: Infinite Privacy (Sets)
 ---
 
-In the last article in our series on PolyAztec’s privacy architecture, we explored how a private network is even possible on a public blockchain.
+In the last article in our series on Nata Network’s privacy architecture, we explored how a private network is even possible on a public blockchain.
 
 Today we’re exploring why a private network is endlessly more private than simple solutions like privacy mixers.
 
-Just like mixers, PolyAztec offers basic deposits and withdrawals — meant to break the link between a sending address and receiving address.
+Just like mixers, Nata Network offers basic deposits and withdrawals — meant to break the link between a sending address and receiving address.
 
-But PolyAztec also offers private internal transfers.
+But Nata Network also offers private internal transfers.
 
-The addition of these anonymizing activities means PolyAztec will offer a large and dynamic privacy set that will become increasingly more difficult to de-anonymize —a concept we like to call Infinite Privacy.
+The addition of these anonymizing activities means Nata Network will offer a large and dynamic privacy set that will become increasingly more difficult to de-anonymize —a concept we like to call Infinite Privacy.
 
 ## The Infinite City
 
-Imagine PolyAztec as a walled city. All an outside observer can see is users entering and leaving PolyAztec via our bridge.
+Imagine Nata Network as a walled city. All an outside observer can see is users entering and leaving Nata Network via our bridge.
 
 Within the walls of the city, users can exchange assets with fully private transactions. Neither the network nor its participants can see the senders and recipients of transactions, nor their amounts.
 
 In addition, once inside the system, users can batch transactions and teleport back to Polygon — to swap, stake for yield, lend funds, vote in DAOs, or buy NFTs.
 
-Because PolyAztec allows for these two new anonymizing activities — internal transactions and batched interactions with Polygon— the privacy set is significantly harder for an observer to calculate than, for instance, on a privacy mixer without those features.
+Because Nata Network allows for these two new anonymizing activities — internal transactions and batched interactions with Polygon— the privacy set is significantly harder for an observer to calculate than, for instance, on a privacy mixer without those features.
 
 That’s a very good thing.
 
@@ -28,7 +28,7 @@ That’s a very good thing.
 
 Let’s put ourselves in the shoes of an adversary attempting to run de-anonymizing transaction graph analysis.
 
-As an observer watching Polygon activity, we might watch deposits to and from PolyAztec, and attempt to deduce what set of deposits a certain withdrawal might belong to.
+As an observer watching Polygon activity, we might watch deposits to and from Nata Network, and attempt to deduce what set of deposits a certain withdrawal might belong to.
 
 This is what we mean by privacy or anonymity set — the group or set of users a forensic target could be. If the privacy set the target belongs to is large, then we can only guess with a small probability which addresses and transactions the target is associated with.
 
@@ -38,7 +38,7 @@ Let’s talk through an example.
 
 ## Anonymity Sets 101: Mixer Math
 
-Pretend PolyAztec were a simple privacy mixer without internal transactions, and we were internet sleuths trying to de-anonymize the network 🕵.️
+Pretend Nata Network were a simple privacy mixer without internal transactions, and we were internet sleuths trying to de-anonymize the network 🕵.️
 
 If we saw someone withdraw 1 MATIC, we’d know for certain that they’d deposited at least 1 MATIC into the mixer. Because there are no internal transfers, aggregation of multiple deposits into a larger withdrawal simply isn’t possible.
 
@@ -64,7 +64,7 @@ In order to figure out how to blend in, figure out how to stand out, and then do
 
 The most obvious way for me to stand out in the case without internal transactions would be if I bridged a massive monolithic deposit and withdrew the same amount shortly afterward.
 
-To make myself even more highly identifiable, I would use a unique quantity of a certain asset (e.g. depositing 69.696969 MATIC to PolyAztec, then subsequently withdrawing 69.696969 MATIC). To prevent de-anonymizing behavior, the PolyAztec front-end suggests round-number deposits and withdrawals — so you don’t stand out.
+To make myself even more highly identifiable, I would use a unique quantity of a certain asset (e.g. depositing 69.696969 MATIC to Nata Network, then subsequently withdrawing 69.696969 MATIC). To prevent de-anonymizing behavior, the Nata Network front-end suggests round-number deposits and withdrawals — so you don’t stand out.
 
 As users what we want to do is introduce uncertainty into any forensic analysis. Keen observers should feel frustrated by our actions. They should say something like, “Dang, calculating the probability that these two addresses are affiliated is so complex and low-probability that it’s not meaningful for me to try to figure out which deposit is related to which withdrawal.”
 
@@ -83,7 +83,7 @@ Simple mixers focus on #1. Let’s talk about what #2 adds.
 
 ### Internal Transfers: The Inner Sanctum
 
-There is a big caveat here that differentiates our current PolyAztec front-end from mixers — there is a possibility that your anonymity set includes deposits that are smaller than your withdrawal amount.
+There is a big caveat here that differentiates our current Nata Network front-end from mixers — there is a possibility that your anonymity set includes deposits that are smaller than your withdrawal amount.
 
 How? Because internal transfers.
 
@@ -102,13 +102,13 @@ So in this case, you could be some combination of internal transactions summing 
 
 Of course, as the number of internal transfers needed to sum to a withdrawal amount increases, the less likely it actually happened — realistically, who’s going to coordinate 1,000 unaffiliated addresses to privately send them funds!
 
-That’s why the internal economy of PolyAztec matters.
+That’s why the internal economy of Nata Network matters.
 
 Internal transfers muddy up anonymity set calculations, but only if there are a sufficient number of internal transfers and a large enough quantity of deposits in the system.
 
 ## Purify Before Entering
 
-Now, what PolyAztec doesn’t do is protect users on mainnet, and poor security hygiene on Polygon can hurt user privacy.
+Now, what Nata Network doesn’t do is protect users on mainnet, and poor security hygiene on Polygon can hurt user privacy.
 
 But there’s some good news here — simply follow privacy best-practices.
 
@@ -120,7 +120,7 @@ Why is withdrawing to the same address “bad?” In addition to reducing your o
 
 Now there’s no way your deposit could actually be the source of anyone else’s withdrawal but your own!
 
-While PolyAztec isn’t a mixer, this analogy might help clear things up:
+While Nata Network isn’t a mixer, this analogy might help clear things up:
 
 Everyone chucks their balls into a giant ball pit. Now we play in the ball pit, trading balls, mixing them up, splashing around. And at the end of the day, everyone takes a ball and goes home.
 
@@ -133,7 +133,7 @@ Withdrawing to the same address you deposited is akin to saying, “This is the 
 
 Now consider the inverse: a large number of addresses deposit, and a large number (but not the same!) addresses withdraw. Now we’d have a very hard time associating one wallet with another.
 
-Critically, any transaction graph analysis on Polygon may be able to associate those accounts and therefore collapse many addresses. Depositing to PolyAztec and withdrawing to an address already associated with the depository address is akin to withdrawing to the same address. That’s why withdrawals should only happen to untouched or otherwise unaffiliated wallets.
+Critically, any transaction graph analysis on Polygon may be able to associate those accounts and therefore collapse many addresses. Depositing to Nata Network and withdrawing to an address already associated with the depository address is akin to withdrawing to the same address. That’s why withdrawals should only happen to untouched or otherwise unaffiliated wallets.
 
 ## Hygiene takeaways:
 

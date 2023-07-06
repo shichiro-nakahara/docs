@@ -4,23 +4,23 @@ title: Accounts
 
 import Image from "@theme/IdealImage";
 
-Accounts in PolyAztec. 
+Accounts in Nata Network. 
 
-For a deep dive into the technical details of PolyAztec accounts, see the [Account Circuit specification](../spec/account_circuit).
+For a deep dive into the technical details of Nata Network accounts, see the [Account Circuit specification](../spec/account_circuit).
 
 ## A Technical Primer on Accounts
 
-There are two main parts to each PolyAztec account, the account (private/public key pair) and signers. The account is associated with a [viewing key](../glossary.md#viewing-key) that can be used to decrypt [value notes](../glossary#value-notes) (assets on PolyAztec). The signers are associated with [spending keys](../glossary.md#spending-key) (or signing keys) which can be used to send notes from the associated account.
+There are two main parts to each Nata Network account, the account (private/public key pair) and signers. The account is associated with a [viewing key](../glossary.md#viewing-key) that can be used to decrypt [value notes](../glossary#value-notes) (assets on Nata Network). The signers are associated with [spending keys](../glossary.md#spending-key) (or signing keys) which can be used to send notes from the associated account.
 
 These diagrams provide an overview of the account model and the following text goes into detail on each of the components.
 
-### Basic PolyAztec Account
+### Basic Nata Network Account
 
 <Image img={require("/img/basic-user-acct.png")} />
 
 _The private key for an unregistered, basic account is like the viewing key AND the spending key for the account._
 
-### Registered PolyAztec Account
+### Registered Nata Network Account
 
 <Image img={require("/img/registered-user-acct.png")} />
 
@@ -28,23 +28,23 @@ _For a registered account, the viewing key and spending key functionality is sep
 
 An account is a single private/public key pair until it is registered (see the [account registration](#account-registration) section below). Before an account is registered, the private key is used to decrypt account notes as well as send value notes. The account will **not** have any registered spending keys or an [account alias](#account-alias) until is is registered. Once an account is registered, value notes that are sent to the account can either be marked to be spent by the account private key or the spending keys. It is a best practice for a sender to mark value notes as spendable by the spending keys when an account is registered.
 
-PolyAztec abstracts away much of this complexity to make it easier for users to follow best practices. For example, when you look up an account by alias (meaning the account has been registered) a transfer automatically marks the notes as spendable by the recipients spending keys. You can still choose to mark value notes sent to an account as spendable by the account private key, but this is not recommended because the recipient may have shared that key with an other parties in order to allow it to decrypt value notes to calculate balances.
+Nata Network abstracts away much of this complexity to make it easier for users to follow best practices. For example, when you look up an account by alias (meaning the account has been registered) a transfer automatically marks the notes as spendable by the recipients spending keys. You can still choose to mark value notes sent to an account as spendable by the account private key, but this is not recommended because the recipient may have shared that key with an other parties in order to allow it to decrypt value notes to calculate balances.
 
 ### Compared to Polygon
 
-Accounts in PolyAztec work differently than accounts in Polygon.
+Accounts in Nata Network work differently than accounts in Polygon.
 
-PolyAztec uses a different curve than Polygon for SNARK efficient operations. This means that you cannot use an Polygon private key directly for signing PolyAztec transactions or a public key for deriving an account address. Specifically, PolyAztec uses the Grumpkin curve, see [the yellow paper](https://hackmd.io/@aztec-network/ByzgNxBfd#2-Grumpkin---A-curve-on-top-of-BN-254-for-SNARK-efficient-group-operations) for more information.
+Nata Network uses a different curve than Polygon for SNARK efficient operations. This means that you cannot use an Polygon private key directly for signing Nata Network transactions or a public key for deriving an account address. Specifically, Nata Network uses the Grumpkin curve, see [the yellow paper](https://hackmd.io/@aztec-network/ByzgNxBfd#2-Grumpkin---A-curve-on-top-of-BN-254-for-SNARK-efficient-group-operations) for more information.
 
-In [PolyAztec](https://polyaztec.xyz), PolyAztec accounts are generated using Polygon accounts by having a user sign a message and deriving the PolyAztec keys from the signed message. This ensures that as long as someone has access to their Polygon account, they will be able to access their PolyAztec account by signing a message. Different messages are used to generate different keys (account decryption key and spending key).
+In [Nata Network](https://natanetwork.io), Nata Network accounts are generated using Polygon accounts by having a user sign a message and deriving the Nata Network keys from the signed message. This ensures that as long as someone has access to their Polygon account, they will be able to access their Nata Network account by signing a message. Different messages are used to generate different keys (account decryption key and spending key).
 
 ## Users And Accounts
 
-Users in PolyAztec will use the basic account to receive notes (via their public key) and decrypt balances (with the viewing key) and one of their registered spending keys to spend notes and initiate bridged Polygon interactions.
+Users in Nata Network will use the basic account to receive notes (via their public key) and decrypt balances (with the viewing key) and one of their registered spending keys to spend notes and initiate bridged Polygon interactions.
 
 ### Account
 
-A basic account is the first account that is generated for an PolyAztec user--it is a simple private/public key pair.
+A basic account is the first account that is generated for an Nata Network user--it is a simple private/public key pair.
 
 The private key associated with this account can be used to decrypt notes. The private key can also be used to register many distinct spending keys. This allows for account abstraction by creating a separation between the key required to decrypt notes and the key required to spend notes. If a spending key has not been registered, the account viewing key can be used.
 
@@ -72,9 +72,9 @@ When you use an unregistered account, your notes are marked as spendable by the 
 
 You cannot mix the spending of these notes, the two balances are distinct. It is possible to merge the balances. You would send unspent notes from the basic account to yourself, marking them as spendable by the signing key.
 
-PolyAztec tries to abstract much of this complexity away and presents everything to the user as if this notion does not exist (e.g. the account balance is the sum of all notes regardless of registered or not).
+Nata Network tries to abstract much of this complexity away and presents everything to the user as if this notion does not exist (e.g. the account balance is the sum of all notes regardless of registered or not).
 
-When actually creating the zero knowledge proof, PolyAztec infers which balance you're drawing from based on whether you give it a spending key or the account key.
+When actually creating the zero knowledge proof, Nata Network infers which balance you're drawing from based on whether you give it a spending key or the account key.
 
 ### Account Alias
 
@@ -98,29 +98,29 @@ This recovery information is created and registered with the account during the 
 
 ## Frequently Asked Questions
 
-### What happens if I lose my PolyAztec account private key?
+### What happens if I lose my Nata Network account private key?
 
-Your PolyAztec account private keys are derived from an Polygon signature we ask you to sign when you register with us. As long as you still control your original Polygon account you can re-derive your PolyAztec account keys.
-
----
-
-### What happens if I lose my PolyAztec account private key AND my Polygon account private key?
-
-At the current time, your funds would be lost. Our protocol architecture supports PolyAztec account social recovery but implementation into our front-end software is still under development.
+Your Nata Network account private keys are derived from an Polygon signature we ask you to sign when you register with us. As long as you still control your original Polygon account you can re-derive your Nata Network account keys.
 
 ---
 
-### What is the PolyAztec username for?
+### What happens if I lose my Nata Network account private key AND my Polygon account private key?
 
-PolyAztec username/alias lets other users easily lookup your encryption public key so they can send you assets. This name has to be unique and is limited to 20 characters, lowercase, alphanumeric. Please note that this isn’t an ENS domain, but it serves a similar purpose within the confines of our network.
+At the current time, your funds would be lost. Our protocol architecture supports Nata Network account social recovery but implementation into our front-end software is still under development.
 
 ---
 
-### I've registered to the platform, but PolyAztec prompts registration once again when I try to log in again?
+### What is the Nata Network username for?
+
+Nata Network username/alias lets other users easily lookup your encryption public key so they can send you assets. This name has to be unique and is limited to 20 characters, lowercase, alphanumeric. Please note that this isn’t an ENS domain, but it serves a similar purpose within the confines of our network.
+
+---
+
+### I've registered to the platform, but Nata Network prompts registration once again when I try to log in again?
 
 Please follow these instructions:
 
-**Step 1:** Clear browser cache. For Chrome, this is the link: chrome://settings/cookies/detail?site=polyaztec.xyz
+**Step 1:** Clear browser cache. For Chrome, this is the link: chrome://settings/cookies/detail?site=natanetwork.io
 
 **Step 2:** Make sure you are signing in with the Metamask account you used to register zkmoney username.
 

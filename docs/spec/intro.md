@@ -1,6 +1,6 @@
 # Intro
 
-This directory contains the PolyAztec specifications.
+This directory contains the Nata Network specifications.
 
 The protocol is broken up into explicit subcomponents each with a specification:
 

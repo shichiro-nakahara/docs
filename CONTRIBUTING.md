@@ -1,6 +1,6 @@
 # Contributing to the docs
 
-Thanks for considering contributing to the PolyAztec documentation site! This document contains a set of guidelines for contributing to the documentation. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+Thanks for considering contributing to the Nata Network documentation site! This document contains a set of guidelines for contributing to the documentation. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 All contributors and participants will follow the [Code of Conduct](./CODE_OF_CONDUCT.md).
 
@@ -10,7 +10,7 @@ This site is built using docusaurus. If you have questions...
 
 This repo is not for asking general questions, so don't open issues with questions. 
 
-If you have a question about PolyAztec, consult the live documentation site at [https://docs.polyaztec.xyz](https://docs.polyaztec.xyz), or ask on [Twitter](https://twitter.com/poly_aztec).
+If you have a question about Nata Network, consult the live documentation site at [https://docs.natanetwork.io](https://docs.natanetwork.io), or ask on [Twitter](https://twitter.com/poly_aztec).
 
 If you have a question about contributing to the docs, post in the [Discussions](https://github.com/shichiro-nakahara/docs/discussions) tab.
 

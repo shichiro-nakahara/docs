@@ -8,9 +8,9 @@ const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "PolyAztec Docs",
+  title: "Nata Network Docs",
   tagline: "Privacy on Polygon",
-  url: "https://docs.polyaztec.xyz",
+  url: "https://docs.natanetwork.io",
   baseUrl: "/",
   trailingSlash: false,
   onBrokenLinks: "throw",
@@ -19,7 +19,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "PolyAztec", // Usually your GitHub org/user name.
+  organizationName: "Nata Network", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -89,7 +89,7 @@ const config = {
       },
       navbar: {
         logo: {
-          alt: "PolyAztec Logo",
+          alt: "Nata Network Logo",
           srcDark: "img/polyaztec-logo-white.svg",
           src: "img/polyaztec-logo-purple.svg"
         },
@@ -118,8 +118,8 @@ const config = {
                 to: "/",
               },
               {
-                label: "How PolyAztec Works",
-                to: "/category/how-polyaztec-works",
+                label: "How Nata Network Works",
+                to: "/category/how-nata-network-works",
               },
             ],
           },
@@ -142,7 +142,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Aztec, modified by PolyAztec, built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Aztec, modified by Nata Network, built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

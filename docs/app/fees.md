@@ -2,7 +2,7 @@
 
 ## Fee Calculation
 
-Fees on PolyAztec are calculated depending on the user action.
+Fees on Nata Network are calculated depending on the user action.
 
 ## Simple Payments
 
@@ -16,6 +16,6 @@ Total rollup verification cost is approximately 550,000 gas. A transaction's sha
 
 b) Call data costs
 
-Call data has to be posted to Polygon to update PolyAztec's state tree with the new offchain system state. The cost of posting call data is approximately 15,376 gas, less than the base transaction cost on Polygon.
+Call data has to be posted to Polygon to update Nata Network's state tree with the new offchain system state. The cost of posting call data is approximately 15,376 gas, less than the base transaction cost on Polygon.
 
 **This means the cost of executing a private transaction is always cheaper than doing a public transaction on Polygon.**

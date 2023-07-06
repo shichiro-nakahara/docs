@@ -1,6 +1,6 @@
 # Rollup Contract
 
-Rollup contract is responsible for processing PolyAztec zkRollups, relaying them to a verifier contract for validation and performing all relevant token transfers.
+Rollup contract is responsible for processing Nata Network zkRollups, relaying them to a verifier contract for validation and performing all relevant token transfers.
 
 ## High-Level Overview of Layer 2 Architecture
 
@@ -32,7 +32,7 @@ The _rootTree_ has no linked nullifier set as it is not possible to delete membe
 
 ## L2 data structures
 
-The following is a brief description of the data structures in the PolyAztec L2 architecture.
+The following is a brief description of the data structures in the Nata Network L2 architecture.
 See [Notes and Nullifiers](./notes_and_nullifiers.md) for a more complete descriptions.
 
 **Value notes** are stored in the _dataTree_.
@@ -46,7 +46,7 @@ The security requirements for the former are weaker than the latter, as spending
 
 ## L2 high-level circuit architecture
 
-PolyAztec utilizes the following ZK-SNARK circuits to describe and validate L2 transactions:
+Nata Network utilizes the following ZK-SNARK circuits to describe and validate L2 transactions:
 
 ### Single transaction circuits
 
@@ -59,7 +59,7 @@ Describes a single _account_ transaction.
 Proof is created by the user on their local hardware.
 
 ### Rollup circuits
-There are 3 circuit types used in PolyAztec:
+There are 3 circuit types used in Nata Network:
 1. **Inner rollup circuit** verifies up to 28 single transaction proofs and performs required L2 state updates.
 
 2. **Root rollup circuit** is referred to as a rollup circuit in the smart contract code/comments.
@@ -77,11 +77,11 @@ Regular PLONK proofs are slower to construct but faster to verify compared to Tu
 The _root verifier circuit_ is made using regular PLONK, and it verifies the Turbo PLONK _root rollup circuit_.
 This reduces the computations (and gas costs) required to verify the proof on-chain.
 
-PolyAztec uses recursive ZK-SNARK constructions to ensure that only the final ZK-SNARK proof in the transaction stack needs to be verified on-chain. If the root verifier proof is correct, one can prove inductively that all other proofs in the transaction stack are correct.
+Nata Network uses recursive ZK-SNARK constructions to ensure that only the final ZK-SNARK proof in the transaction stack needs to be verified on-chain. If the root verifier proof is correct, one can prove inductively that all other proofs in the transaction stack are correct.
 
 ## L2 transaction types
 
-An PolyAztec rollup block contains up to 896 individual user transactions, which represent one of seven transaction types.
+An Nata Network rollup block contains up to 896 individual user transactions, which represent one of seven transaction types.
 Each transaction type is defined via a _proofId_ variable attached to the transaction.
 
 | proofId | transaction type | description                                                                                    |
@@ -114,7 +114,7 @@ As not all fields are used by all transaction types, a custom encoding algorithm
 
 ### Data included in a rollup transaction
 
-When the `processRollup(...)` function is called, the input variable bytes calldata `encodedProofData` contains the core information required to validate and process an PolyAztec rollup block.
+When the `processRollup(...)` function is called, the input variable bytes calldata `encodedProofData` contains the core information required to validate and process an Nata Network rollup block.
 
 Due to significant gas inefficiencies in the Solidity ABI decoding logic, custom encoding is used and the overall data structure is wrapped in a bytes variable.
 
@@ -130,7 +130,7 @@ Rollup Header Structure
 | --------------- | --------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00 - 0x20     | 32        | rollupId                                 | Unique rollup block identifier. Equivalent to block number                                                                                                                   |
 | 0x20 - 0x40     | 32        | rollupSize                               | Max number of transactions in the block                                                                                                                                      |
-| 0x40 - 0x60     | 32        | dataStartIndex                           | Position of the next empty slot in the PolyAztec _dataTree_                                                                                                                       |
+| 0x40 - 0x60     | 32        | dataStartIndex                           | Position of the next empty slot in the Nata Network _dataTree_                                                                                                                       |
 | 0x60 - 0x80     | 32        | oldDataRoot                              | Root of the _dataTree_ prior to rollup block’s state updates                                                                                                                  |
 | 0x80 - 0xa0     | 32        | newDataRoot                              | Root of the _dataTree_ after rollup block’s state updates                                                                                                                     |
 | 0xa0 - 0xc0     | 32        | oldNullRoot                              | Root of the nullifier tree prior to rollup block’s state updates                                                                                                             |
@@ -150,7 +150,7 @@ Rollup Header Structure
 
 N.B. our documentation will sometimes refer to a “note” as a “commitment” (they are effectively synonyms in our architecture).
 
-## Security properties of PolyAztec
+## Security properties of Nata Network
 
 The tokens/MATIC in every un-spent value note in the _dataTree_ must be fully collateralised on-chain.
 That is, the _RollupProcessor.sol_ contract must own enough ERC20 tokens/MATIC to cover the value represented in all of its un-spent notes.

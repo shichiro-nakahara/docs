@@ -17,7 +17,7 @@ const sidebars = {
     "intro",
     {
       type: "category",
-      label: "How PolyAztec Works",
+      label: "How Nata Network Works",
       link: {
         type: "generated-index",
       },
@@ -28,13 +28,13 @@ const sidebars = {
           label: "Privacy",
           link: {
             type: "doc",
-            id: "how-polyaztec-works/privacy",
+            id: "how-natanetwork-works/privacy",
           },
-          items: ["how-polyaztec-works/privacy-sets"],
+          items: ["how-natanetwork-works/privacy-sets"],
         },
-        "how-polyaztec-works/accounts",
-        "how-polyaztec-works/tokens",
-        "how-polyaztec-works/faq",
+        "how-natanetwork-works/accounts",
+        "how-natanetwork-works/tokens",
+        "how-natanetwork-works/faq",
       ],
     },
     {
@@ -85,7 +85,7 @@ const sidebars = {
     "compliance",
     "glossary",
   ],
-  polyAztecSidebar: [
+  nataNetworkSidebar: [
     "app/userguide",
     "app/fees",
     "app/assetvaluation",
