@@ -73,3 +73,7 @@ footer {
 .footer__copyright {
   margin-top: 4em;
 }
+
+.navbar__logo {
+  height: 3em;
+}

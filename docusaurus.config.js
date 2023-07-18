@@ -90,8 +90,8 @@ const config = {
       navbar: {
         logo: {
           alt: "Nata Network Logo",
-          srcDark: "img/polyaztec-logo-white.svg",
-          src: "img/polyaztec-logo-purple.svg"
+          srcDark: "img/nata-network-logo-white.svg",
+          src: "img/nata-network-logo-purple.svg"
         },
         items: [
           {
