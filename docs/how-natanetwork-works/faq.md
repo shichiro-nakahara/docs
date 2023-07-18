@@ -157,7 +157,7 @@ Nata Network doesn’t make any money from transaction fees on the platform, sur
 ### Which Aliases/Usernames are reserved?
 
 Aliases/Usernames less than 5 characters of length are reserved. Creating an account with 5+ characters are free.
-1 Char: 2000 MATIC fee
-2 Char: 1000 MATIC fee
-3 Char: 500 MATIC fee
-4 Char: 200 MATIC fee
+- 1 Char: 2000 MATIC fee
+- 2 Char: 1000 MATIC fee
+- 3 Char: 500 MATIC fee
+- 4 Char: 200 MATIC fee

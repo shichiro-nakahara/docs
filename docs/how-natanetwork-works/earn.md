@@ -24,11 +24,11 @@ To ensure the three depositable asset pools are growing at the same rate, token 
 Users that used other privacy dapps were eligible to claim NATA tokens.
 
 ### Privacy Dapp eligible Users
-Aztec V2 - 181486
-TornadoCash - 99128
-Aztec V1 - 41621
-zkBOB - 5562 
-Railgun - 3297
+- Aztec V2 - 181486
+- TornadoCash - 99128
+- Aztec V1 - 41621
+- zkBOB - 5562 
+- Railgun - 3297
 
 ## Bonus Multipler 
 Must have used Aztec V1/V2 and any of the other privacy apps listed above. These users were allocated a bonus multipler. (2680 users)
