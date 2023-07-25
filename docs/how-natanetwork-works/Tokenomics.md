@@ -5,7 +5,7 @@
 ## Allocation
 - Retro Airdrop: 15%
 - Loyalty Program: 35%
-- Team: 40%
+- DAO Reserves: 40%
 - Partners/Investors/Exchange Listing/Market Makers: 10% 
 
 # Retro Airdrop
