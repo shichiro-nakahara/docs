@@ -1,6 +1,6 @@
-# Aztec Protocol Documentation
+# Nata Network Protocol Documentation
 
-You can view the latest successful build here. [https://docs.aztec.network](https://docs.natanetwork.io/)
+You can view the latest successful build here. [https://docs.natanetwork.io](https://docs.natanetwork.io/)
 
 Built with docusaurus.
 
