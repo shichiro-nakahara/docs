@@ -1,7 +1,12 @@
 # Protocol Revenue
 
-## Nata Network Transaction/Gas Fee
-Nata Network requires a small transaction fee for inclusion into the ZK-rollup. This fee is currently ~0.001. The governing DAO could vote to change this value.
+## Nata Network Transaction Fee
+Nata Network requires a small transaction fee for inclusion into the ZK-rollup. The fee is dynamically set to help reduce large amount of pending transactions during times of high activity. Surge pricing levels are defined below. 
+- Default: ~$0.10 
+- Surge 1: ~$1.00 (1000-2000 pending tx)
+- Surge 2: ~$10.00 (2000-3000 pending tx)
+- Surge 3: ~$100.00 (3000-4000 pending tx)
+- Surge 4: ~$1000.00 (4000+ pending tx)
 
 ## Aave Interest
 A portion of deposits (currently 50%) are supplied to Aave V3. The governing DAO could vote to change this value.

@@ -56,7 +56,7 @@ And you can also track your transactions in real-time in the Nata Network explor
 
 ### Is Nata Network decentralized?
 
-zk-money is powered by Nata Network. The current release of Nata Network's L2 Rollup technology is run with Nata Network as the sole rollup provider, with more rollup providers onboarding later this year. At that point, the system will be decentralised. Currently, users rely on Nata Network to relay rolled up transactions to the chain. In case Nata Network suddenly disappears, there is an emergency mode to allow users to withdraw funds from the system directly from the contract.
+The current release of Nata Network's L2 Rollup technology is run with Nata Network as the sole rollup provider, with more rollup providers onboarding later this year. At that point, the system will be decentralised. Currently, users rely on Nata Network to relay rolled up transactions to the chain. In case Nata Network suddenly disappears, there is an emergency mode to allow users to withdraw funds from the system directly from the contract.
 
 ---
 
