@@ -36,6 +36,7 @@ const sidebars = {
         "how-natanetwork-works/tokens",
         "how-natanetwork-works/earn",
         "how-natanetwork-works/Tokenomics",
+        "how-natanetwork-works/roadmap",
         "how-natanetwork-works/faq",
       ],
     },
@@ -92,6 +93,10 @@ const sidebars = {
     "app/fees",
     "app/assetvaluation",
     "app/troubleshooting"
+  ],
+  nataRouterSidebar: [
+    "router/userguide",
+    "router/routes"
   ],
 };
 

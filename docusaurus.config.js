@@ -103,7 +103,12 @@ const config = {
           {
             type: "doc",
             docId: "app/userguide",
-            label: "App",
+            label: "NataNetwork.io",
+          },
+          {
+            type: "doc",
+            docId: "router/userguide",
+            label: "NataRouter.com",
           },
         ],
       },
@@ -127,8 +132,16 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Twitter",
-                href: "https://twitter.com/poly_aztec",
+                label: "LinkTree",
+                href: "https://linktr.ee/natanetwork",
+              },
+              {
+                label: "Twitter/X",
+                href: "https://twitter.com/nata_network_io",
+              },
+              {
+                label: "Discord",
+                href: "https://discord.gg/7cswMvWeNc",
               }
             ],
           },
@@ -142,7 +155,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Aztec, modified by Nata Network, built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Nata Network, built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
