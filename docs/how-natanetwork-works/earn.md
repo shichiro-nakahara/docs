@@ -11,7 +11,6 @@ Each block will have rewards until the 35% allocation is gone or the DAO votes t
 
 ## Maximize NATA Rewards
 A user can earn the max per block by depositing the protocol limit for each of the three available assets (MATIC/WETH/DAI). 
-- Updated 20.08.2023: 'Max Deposit' allocation provides tokens for users depositing the max amount.
 
 ## Epoch and Claiming Token Rewards
 Once the current epoch has completed, users can claim the NATA tokens for the previous epoch. Epochs are 7 days long. 
@@ -36,6 +35,3 @@ Users that used other privacy dapps were eligible to claim NATA tokens.
 
 ## Bonus Multipler 
 Must have used Aztec V1/V2 and any of the other privacy apps listed above. These users were allocated a bonus multipler. (2680 users)
-
-## MUST READ FOR AIRDROP 
-Airdropped users must participate in each Earn Epoch to avoid having their token allocation reduced. 

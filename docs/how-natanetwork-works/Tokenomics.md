@@ -3,13 +3,10 @@
 ## Total Fixed Supply: 10,000,000,000 NATA
 
 ## Allocation
+- Private Sale: 10% 
 - Retro Airdrop: 15%
-- Loyalty Program: 35%
-- Team: 20%
-- DAO Reserve: 20%
-- Token Creation Event: 10% 
-
-# Retro Airdrop
+- Founders: 20%
+- DAO Treasury: 55%
 
 ## Who was eligible for the retro airdrop?
 Users that used other privacy dapps were eligible to claim NATA tokens. Users have 1 year to claim tokens.
@@ -25,10 +22,7 @@ Users that used other privacy dapps were eligible to claim NATA tokens. Users ha
 - Aztec V2 (0.001-0.01 ETH deposit) - 92785
 
 ## Bonus Multipler 
-Must have used Aztec V1/V2 and any of the other privacy apps listed above. These users were allocated a bonus multipler. (2680 users)
+Must have used Aztec V1/V2 and any of the other privacy apps listed above. These users were allocated a bonus multipler. (2680 users) 
 
-## MUST READ FOR AIRDROP 
-Airdropped users must participate in each Earn Epoch to avoid having their token allocation reduced. 
-
-## eNATA -> NATA 
-The protocol will distrubute eNATA tokens which are non-transferable. At the end of the loyality program, users can redeem $eNATA for $NATA. The reason for this is to ensure the governance tokens are going to participants that use the protocol regularly. We want to reduce the amount of tokens going to airdrop farmers by requiring airdropped users to participate in the loyalty program.   
+## eNATA -> NATA Migration
+The protocol will distribute eNATA tokens which are non-transferable. Check refer to the roadmap when the migration contract will be deployed.
