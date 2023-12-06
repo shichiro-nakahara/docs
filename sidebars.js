@@ -95,7 +95,21 @@ const sidebars = {
     "app/troubleshooting"
   ],
   nataRouterSidebar: [
-    "router/userguide",
+    {
+      type: "category",
+      label: "User Guide",
+      link: {
+        type: "generated-index"
+      },
+      collapsed: false,
+      items: [
+        "router/userguide/introduction",
+        "router/userguide/deposit",
+        "router/userguide/withdraw",
+        "router/userguide/zksendreceive",
+        "router/userguide/communitysupport",
+      ]
+    },
     "router/routes"
   ],
 };

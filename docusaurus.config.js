@@ -107,7 +107,7 @@ const config = {
           },
           {
             type: "doc",
-            docId: "router/userguide",
+            docId: "router/userguide/introduction",
             label: "NataRouter.com",
           },
         ],
