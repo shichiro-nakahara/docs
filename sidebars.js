@@ -37,6 +37,7 @@ const sidebars = {
         "how-natanetwork-works/earn",
         "how-natanetwork-works/Tokenomics",
         "how-natanetwork-works/roadmap",
+        "how-natanetwork-works/contracts",
         "how-natanetwork-works/faq",
       ],
     },

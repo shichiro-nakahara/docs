@@ -1,37 +1,15 @@
 # Earn/Loyalty Program
 
 ## Overview
-NATA tokens are rewarded to users that perform a deposit in the ZK-rollup block.
+NATA tokens are rewarded to users that perform a cross-chain deposits using the Nata Router.
 
-Tokens are allocated portionally across the three asset pools (MATIC/WETH/DAI).
+Tokens are allocated to the chains voted on by the community.
 
-For each asset, tokens are rewarded to users with the largest deposit.
-
-Each block will have rewards until the 35% allocation is gone or the DAO votes to stop the program.
-
-## Maximize NATA Rewards
-A user can earn the max per block by depositing the protocol limit for each of the three available assets (MATIC/WETH/DAI). 
+Users with larger and more frequent deposits, earn more of the tokens allocated during the epoch.
 
 ## Epoch and Claiming Token Rewards
-Once the current epoch has completed, users can claim the NATA tokens for the previous epoch. Epochs are 7 days long. 
+Once the current epoch has completed, users can claim the eNATA tokens for the previous epoch. Epochs are 7 days long. 
 
 ## Allocating Token Rewards 
-To ensure the three depositable asset pools are growing at the same rate, token reward allocations can be adjusted before the start of the next epoch. The governing DAO could be responsible for this.
+The governing DAO is responsible for adjusting emissions across the various chains to ensure steady protocol growth. 
 
-# Retro Airdrop
-
-## Who was eligible for the retro airdrop?
-Users that used other privacy dapps were eligible to claim NATA tokens.
-
-### Privacy Dapp eligible Users
-## Airdrop #1
-- Aztec V2 (0.01+ ETH deposit) - 181486
-- TornadoCash - 99128
-- Aztec V1 - 41621
-- zkBOB - 5562 
-- Railgun - 3297
-## Airdrop #2
-- Aztec V2 (0.001-0.01 ETH deposit) - 92785
-
-## Bonus Multipler 
-Must have used Aztec V1/V2 and any of the other privacy apps listed above. These users were allocated a bonus multipler. (2680 users)

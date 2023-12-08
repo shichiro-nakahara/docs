@@ -1,12 +1,12 @@
 # Deposit Funds
 
-## Step 1: Connect zkAccount
-When you land on the router app, click on “Connect zkAccount” to be taken to the wallet connection screen.
+## Step 1: Connect Wallet
+When you land on the router app, click on “Connect Wallet” to be taken to the wallet connection screen.
 
 ![image](/img/router-step-1-connect.png)
 
-## Step 2: Sign message to retrieve zkAddress
-You will be prompted to sign a message to retrieve your Nata Network zkAccount address.
+## Step 2: Sign message to decrypt Nata Wallet
+You will be prompted to sign a message to decrypt your Nata Network Wallet.
 
 ![image](/img/router-step-2-sign.png)
 
