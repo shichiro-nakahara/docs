@@ -40,10 +40,10 @@ Step 4: Right click anywhere in the logs and “Save as…” to download the fi
 
 ![2022-08-16 21_00_06-zk money](https://user-images.githubusercontent.com/4763902/184889636-d2f84bfe-0dd1-4005-8573-c54f4b6a6d02.png)
 
-Step 5: Send us a message on [Twitter](https://twitter.com/poly_aztec). 
+Step 5: Send us a message on [Twitter](https://linktr.ee/natanetwork). 
 
 ## Frequently Asked Questions
 
 Check the [Frequently Asked Questions page](/how-natanetwork-works/faq) to see if your problem is addressed there.
 
-If it isn't, send us a message on [Twitter](https://twitter.com/poly_aztec).
+If it isn't, send us a message on [Twitter](https://linktr.ee/natanetwork).

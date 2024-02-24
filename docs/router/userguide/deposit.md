@@ -36,7 +36,7 @@ Sign approval to spend token. Sign the deposit proof.
 ![image](/img/router-step-10-sign-proof.png)
 
 ## Step 7: Sign LayerZero TX
-Sign LayerZero transaction to start transfer. Transfers should take less than 120 seconds.
+Sign bridge transaction to start transfer. Transfers should take less than 120 seconds.
 
 ## Step 8: Open zkWallet
 Click on your zkAddress to open your zkWallet.

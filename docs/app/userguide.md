@@ -111,4 +111,4 @@ Disclaimer: It is responsible for projects using bleeding-edge cryptography, to 
 
 ## Community Support
 
-For any remaining questions and live troubleshooting help, visit our [Twitter](https://twitter.com/nata_network_io) for support.
+For any remaining questions and live troubleshooting help, visit our [Twitter](https://linktr.ee/natanetwork) for support.

@@ -137,11 +137,11 @@ const config = {
               },
               {
                 label: "Twitter/X",
-                href: "https://twitter.com/nata_network_io",
+                href: "https://linktr.ee/natanetwork",
               },
               {
                 label: "Discord",
-                href: "https://discord.gg/7cswMvWeNc",
+                href: "https://linktr.ee/natanetwork",
               }
             ],
           },

@@ -10,7 +10,7 @@ This site is built using docusaurus. If you have questions...
 
 This repo is not for asking general questions, so don't open issues with questions. 
 
-If you have a question about Nata Network, consult the live documentation site at [https://docs.natanetwork.io](https://docs.natanetwork.io), or ask on [Twitter](https://twitter.com/poly_aztec).
+If you have a question about Nata Network, consult the live documentation site at [https://docs.natanetwork.io](https://docs.natanetwork.io), or ask on [Twitter](https://linktr.ee/natanetwork).
 
 If you have a question about contributing to the docs, post in the [Discussions](https://github.com/shichiro-nakahara/docs/discussions) tab.
 

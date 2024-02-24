@@ -12,7 +12,7 @@
 Users that used other privacy dapps were eligible to claim NATA tokens. Users have 1 year to claim tokens.
 
 ### Privacy Dapp eligible Users
-## Airdrop #1 - [Check Eligibility](https://gist.githubusercontent.com/shichiro-nakahara/21329bcb654c385e7f09937333fbce6e/raw/bde5efc9ef3dcffc2515ce09d4018bf23fa01716/3cf79a34-ef76-4303-8362-f26924eec32e.json)
+## Airdrop #1 - [Check Eligibility](https://gist.githubusercontent.com/shichiro-nakahara/522b575bcbae4678982db535111c03bf/raw/b3a5fc1c03a7650e4bc5ee65d8e2882653ecd767/124c1074-877b-4fe3-9bab-90784804b78a.json)
 - Aztec V2 (0.01+ ETH deposit) - 181486 addresses
 - TornadoCash - 99128 addresses
 - Aztec V1 - 41621 addresses
