@@ -7,4 +7,4 @@
 | USDT  | ✅       | ❌          | ✅       | ❌       | ❌     | *✅      | ❌     | *✅    | *✅ | *✅ | ❌     |
 | WETH  | ✅       | ✅          | ✅       | ✅       | ✅     | ❌       | ❌     | ❌     | ❌  | ❌  | ✅     |
 
-\* Indicates Stargate/LayerZero used instead of Across Protocol.
+\* Stargate/LayerZero used instead of Across Protocol.

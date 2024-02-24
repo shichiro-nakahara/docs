@@ -24,5 +24,8 @@ Users that used other privacy dapps were eligible to claim NATA tokens. Users ha
 ## Bonus Multipler 
 Must have used Aztec V1/V2 and any of the other privacy apps listed above. These users were allocated a bonus multipler. (2680 addresses) 
 
+## Airdrop #3
+- Coming Soon
+
 ## eNATA -> NATA Migration
-The protocol will distribute eNATA tokens which are non-transferable. Check refer to the roadmap when the migration contract will be deployed.
+The protocol will distribute eNATA tokens which are non-transferable. Users can redeem 1 eNATA for 1 NATA at TGE.

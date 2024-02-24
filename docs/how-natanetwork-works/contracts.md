@@ -10,4 +10,4 @@ Confirm you are interacting with the correct smart contracts before signing tran
 | NataGateway | [0x5F091Af1aBdF685eF91722f8912DF2423FFCBC1E](https://polygonscan.com/address/0x5F091Af1aBdF685eF91722f8912DF2423FFCBC1E#code) |
 | NataFeeDistributor | [0x36F317D87796d289c7F2E451d553C0FdBB13a075](https://polygonscan.com/address/0x36f317d87796d289c7f2e451d553c0fdbb13a075#code) |
 | \[ 2/4 Safe Multi-sig\] | [0x0A7b3E088D8d647c4caD8dFAf81F71bF8250e030](https://app.safe.global/home?safe=matic:0x0A7b3E088D8d647c4caD8dFAf81F71bF8250e030) |
-| \[ ENS\] | [0x574755975ce360Bf70aa4960950A95AE3A2C0f92](https://etherscan.io/address/0x574755975ce360Bf70aa4960950A95AE3A2C0f92) |
+| natanetwork.eth | [0x574755975ce360Bf70aa4960950A95AE3A2C0f92](https://etherscan.io/address/0x574755975ce360Bf70aa4960950A95AE3A2C0f92) |

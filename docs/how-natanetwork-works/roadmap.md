@@ -1,16 +1,17 @@
 # Roadmap
 
 # Complete
-- Deploy ZK Rollup on Polygon
-- Deploy $eNATA token
-- Deploy Retro Airdrop
-- Deploy NataGateway (Router)
-- Cross-Chain deposits (Stargate/LayerZero)
-- Cross-Chain withdrawals (Stargate/LayerZero)
-- Cross-Chain deposits (Across)
-- Cross-Chain withdrawals (Across)
-- eNATA emissions for specific chain deposits
-- Deploy nataFeeDistributor contract
+- ✅Deploy ZK Rollup on Polygon
+- ✅Deploy $eNATA token
+- ✅Deploy Retro Airdrop
+- ✅Deploy NataGateway (Router)
+- ✅Cross-Chain deposits (Stargate/LayerZero)
+- ✅Cross-Chain withdrawals (Stargate/LayerZero)
+- ✅Cross-Chain deposits (Across)
+- ✅Cross-Chain withdrawals (Across)
+- ✅eNATA emissions for specific chain deposits
+- ✅Deploy nataFeeDistributor contract
+
 # Incomplete
 - [ACTIVE] Deploy cross-chain $NATA token
 - Deploy $NATA staking contract
