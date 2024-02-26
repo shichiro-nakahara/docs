@@ -86,6 +86,7 @@ const sidebars = {
         "spec/rollup_contract",
       ],
     },
+    "audits",
     "compliance",
     "glossary",
   ],
